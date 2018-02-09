@@ -10,6 +10,10 @@ app = Flask(__name__)
 def home():
 	return "Welcome to Wildcards... The best Hackathon Team Ever !coz we've got Apti sir , Swagger , LadiesMan & ofcourse I B) "
 
+
+@app.route('/info')
+def info():
+	return "info"
 # @app.route('/hello/<miss>')
 # def hello_world(miss):
 # 	return 'Hello World '+miss
