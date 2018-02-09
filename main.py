@@ -1,6 +1,10 @@
-from flask import Flask , redirect , url_for 
-#  importing this is mandatory.
-# takes current module name as arg.
+from flask import render_template , url_for , redirect , request, session , abort , flash , g , jsonify
+from sqlalchemy import exc
+import json
+# g in flask exists globally
+from functools import wraps
+from werkzeug.utils import secure_filename
+from time import time
 app = Flask(__name__)
 
 # acts as a decorator which tells the application 
@@ -8,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-	return "Welcome to Wildcards... The best Hackathon Team Ever !coz we've got Apti sir , Swagger , LadiesMan & ofcourse I B) "
+	return render_template('index.html')
 
 
 @app.route('/info')
