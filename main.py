@@ -1,4 +1,4 @@
-from flask import render_template , url_for , redirect , request, session , abort , flash , g , jsonify
+from flask import render_template , url_for , redirect , request, session , abort , flash , g , jsonify, Flask 
 from sqlalchemy import exc
 import json
 # g in flask exists globally
